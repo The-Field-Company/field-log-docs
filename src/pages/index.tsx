@@ -115,7 +115,7 @@ function Hero(): ReactNode {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="FieldLog Documentation"
+      title="Documentation"
       description="Guides and instructions for using the FieldLog field data collection application.">
       <main className={styles.landing}>
         <Hero />

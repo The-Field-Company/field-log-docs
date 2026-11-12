@@ -2,11 +2,14 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+import whiteLabelPlugin from './plugins/white-label';
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'FieldLog',
   tagline: 'Built for the people who count things in the rain.',
+  titleDelimiter: '·',
   favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -39,6 +42,7 @@ const config: Config = {
     [
       'classic',
       {
+        blog: false,
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
@@ -51,14 +55,22 @@ const config: Config = {
     ],
   ],
 
+  plugins: [whiteLabelPlugin],
+
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
+    metadata: [
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'FieldLog' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: 'FieldLog documentation' },
+      { name: 'theme-color', content: '#06311b' },
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: null,
       logo: {
         alt: 'FieldLog',
         src: 'img/logo-wide.png',
