@@ -1,0 +1,14 @@
+{
+  "logo.alt": {
+    "message": "FieldLog",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "Documentación",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Go to Application": {
+    "message": "Ir a la aplicación",
+    "description": "Navbar item with label Go to Application"
+  }
+}

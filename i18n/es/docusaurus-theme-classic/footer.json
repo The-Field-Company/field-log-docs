@@ -1,0 +1,30 @@
+{
+  "link.title.Docs": {
+    "message": "Documentación",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.FieldLog": {
+    "message": "FieldLog",
+    "description": "The title of the footer links column with title=FieldLog in the footer"
+  },
+  "link.item.label.Getting Started": {
+    "message": "Primeros pasos",
+    "description": "The label of footer link with label=Getting Started linking to /docs/getting-started"
+  },
+  "link.item.label.Field Log Application": {
+    "message": "Aplicación Field Log",
+    "description": "The label of footer link with label=Field Log Application linking to https://fieldlog.thefieldco.com/"
+  },
+  "link.item.label.Request Access": {
+    "message": "Solicitar acceso",
+    "description": "The label of footer link with label=Request Access linking to https://fieldlog.thefieldco.com/request-access"
+  },
+  "link.item.label.The Field Company": {
+    "message": "The Field Company",
+    "description": "The label of footer link with label=The Field Company linking to https://thefieldco.com"
+  },
+  "link.item.label.Github": {
+    "message": "Github",
+    "description": "The label of footer link with label=Github linking to https://github.com/The-Field-Company"
+  }
+}

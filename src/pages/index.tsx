@@ -2,68 +2,9 @@ import type { ReactNode } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import { translate } from '@docusaurus/Translate';
 
 import styles from './index.module.css';
-
-const REQUEST_ACCESS = 'https://fieldlog.thefieldco.com/request-access';
-
-type Step = { title: string; description: string; image: string };
-type Feature = { title: string; description: string; image: string };
-
-const steps: Step[] = [
-  {
-    title: 'Create Session',
-    description: 'Build your form. Drag fields. Publish.',
-    image: 'img/step1.webp',
-  },
-  {
-    title: 'Deploy to Field',
-    description: 'Share a link or QR code. Your team opens it on any phone.',
-    image: 'img/step2.webp',
-  },
-  {
-    title: 'Collect Data',
-    description:
-      'Submissions arrive with GPS, photos, and timestamps. Watch the dashboard update.',
-    image: 'img/step3.webp',
-  },
-];
-
-const features: Feature[] = [
-  {
-    title: 'Build Forms',
-    description: 'Drag fields onto your canvas. Add conditions, split into steps. Ship it.',
-    image: 'img/feature-form.webp',
-  },
-  {
-    title: 'Go Offline',
-    description:
-      'No signal at the site? The form still works. Entries save locally and sync later.',
-    image: 'img/feature-offline.webp',
-  },
-  {
-    title: 'Pin Locations',
-    description: 'GPS coordinates tag every record. Your phone does the work.',
-    image: 'img/feature-gps.webp',
-  },
-  {
-    title: 'Watch Live',
-    description:
-      'Open the dashboard. Watch submissions roll in as your team finishes each plot.',
-    image: 'img/feature-dashboard.webp',
-  },
-  {
-    title: 'Open It Up',
-    description:
-      'Invite the public to submit observations. Review and approve what comes in.',
-    image: 'img/feature-public.webp',
-  },
-  {
-    title: 'Get Your Data',
-    description: 'Download everything as CSV, KML, or JSON. All standard formats.',
-    image: 'img/feature-export.webp',
-  },
-];
 
 function Hero(): ReactNode {
   const droneBg = useBaseUrl('img/drone-bg.webp');
@@ -77,46 +18,90 @@ function Hero(): ReactNode {
           <div className={styles.heroCopy}>
             <h1 className={styles.heroHeadline}>
               <span className={styles.headlineLight}>Field Log</span>{' '}
-              <span className={styles.headlineAccent}>DOCUMENTATION</span>
+              <span className={styles.headlineAccent}>
+                {translate({
+                  id: 'homepage.hero.accent',
+                  message: 'DOCUMENTATION',
+                  description: 'Second half of the hero headline',
+                })}
+              </span>
             </h1>
             <p className={styles.heroSubheadline}>
-              Instructions and Guides on how to use the field log application
+              {translate({
+                id: 'homepage.hero.subheadline',
+                message:
+                  'Instructions and Guides on how to use the field log application',
+                description: 'Hero subheadline',
+              })}
             </p>
           </div>
           <div className={styles.heroMockup}>
-            <img src={mockup} alt="FieldLog product preview" className={styles.heroMockupImg} />
+            <img
+              src={mockup}
+              alt={translate({
+                id: 'homepage.hero.mockupAlt',
+                message: 'FieldLog product preview',
+                description: 'Alt text for the hero product image',
+              })}
+              className={styles.heroMockupImg}
+            />
           </div>
         </div>
         <div className={styles.heroBody}>
           <p>
-            These guides will explain how to build forms, collect observations in
-            the field, and get your results out when the work is done.
+            {translate({
+              id: 'homepage.body.explain',
+              message:
+                'These guides will explain how to build forms, collect observations in the field, and get your results out when the work is done.',
+              description: 'First body paragraph',
+            })}
           </p>
           <p>
-            <span className={styles.brand}>FieldLog</span> is built for places
-            without a signal. Entries save on your phone and sync automatically
-            once you're back online, so you can keep recording wherever the day
-            takes you.
+            <span className={styles.brand}>FieldLog</span>{' '}
+            {translate({
+              id: 'homepage.body.built',
+              message:
+                "is built for places without a signal. Entries save on your phone and sync automatically once you're back online, so you can keep recording wherever the day takes you.",
+              description: 'Second body paragraph, following the FieldLog brand',
+            })}
           </p>
           <p>
-            Start with the tutorial to set up your first session, or jump to
-            whichever topic you need in the sidebar.
+            {translate({
+              id: 'homepage.body.start',
+              message:
+                'Start with the tutorial to set up your first session, or jump to whichever topic you need in the sidebar.',
+              description: 'Third body paragraph',
+            })}
           </p>
         </div>
         <div className={styles.heroActions}>
-          <Link className={styles.primaryBtn} to="/docs/intro">
-            Getting started
+          <Link className={styles.primaryBtn} to="/docs/getting-started">
+            {translate({
+              id: 'homepage.action.gettingStarted',
+              message: 'Getting started',
+              description: 'Primary call-to-action button label',
+            })}
           </Link>
         </div>
       </div>
     </section>
   );
 }
+
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Documentation"
-      description="Guides and instructions for using the FieldLog field data collection application.">
+      title={translate({
+        id: 'homepage.title',
+        message: 'Documentation',
+        description: 'Page title',
+      })}
+      description={translate({
+        id: 'homepage.description',
+        message:
+          'Guides and instructions for using the FieldLog field data collection application.',
+        description: 'Page meta description',
+      })}>
       <main className={styles.landing}>
         <Hero />
       </main>
