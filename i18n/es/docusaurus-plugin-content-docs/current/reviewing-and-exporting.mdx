@@ -1,0 +1,106 @@
+---
+sidebar_position: 7
+---
+
+# Revisar y exportar datos
+
+A medida que llegan las observaciones desde el campo, el **panel de la sesión**
+reúne en un solo lugar las ubicaciones GPS, fotografías, conteos por especie y
+datos en bruto —y permite a los gestores exportar todo en un archivo `.zip`
+portátil—.
+
+## Explorar avistamientos en el mapa interactivo
+
+Siempre que una sesión tenga activada la opción **Track GPS location with
+submissions**, aparecerá en el panel la tarjeta **Submission Locations**
+indicando cuántos registros incluyen coordenadas (por ejemplo,
+`5 of 5 with GPS`):
+
+![Panel de la sesión mostrando el mapa interactivo OpenStreetMap con marcadores GPS sobre la tabla de envíos con fotos](/img/dashboard-map.png)
+
+- **Acerca y desplaza el mapa** con los botones `+` / `−` o gestos táctiles para
+  inspeccionar transectos, parcelas o estaciones de cámaras trampa sobre
+  OpenStreetMap.
+- **Haz clic en cualquier marcador azul** para ver el **nombre de usuario del
+  colaborador** y la **fecha y hora exacta** del envío.
+
+---
+
+## Consultar envíos recientes y fotografías de campo
+
+En sesiones **Basic (FormKit)** y **Advanced (SurveyJS)**, la tabla **Recent
+Submissions** muestra las observaciones más recientes con una columna por cada
+pregunta del formulario.
+
+Cuando los registros incluyen fotografías adjuntas, verás miniaturas directamente
+en la tabla. Haz clic en cualquier miniatura para abrir el **visor de fotos** a
+resolución completa:
+
+![Visor de fotografías a tamaño completo mostrando la imagen de un león, el peso del archivo y el enlace Open original](/img/dashboard-photo-viewer.png)
+
+Desde el visor puedes comprobar el nombre y tamaño del archivo (por ejemplo,
+`84 KB`), hacer clic en **Open original** para abrir la imagen original en una
+nueva pestaña o pulsar `Esc` / `✕` para cerrar.
+
+---
+
+## Revisar totales y actividad en Tally Counter
+
+En las sesiones **Tally Counter**, el panel reemplaza la tabla por **Tally
+Results**:
+
+![Resultados de Tally Counter mostrando los totales acumulados por especie y grupo sobre el historial cronológico](/img/dashboard-tally-results.png)
+
+- **Cuadrícula de resumen acumulado (arriba)** — Suma cada toque por especie,
+  organizado bajo tus grupos de categorías anidados (como `Mammals → Hoofed` y
+  `Birds → Waterfowl`).
+- **Historial cronológico de actividad (abajo)** — Lista cada toque individual
+  indicando quién lo registró, la especie, la ruta de grupos y hace cuánto se
+  envió.
+
+---
+
+## Inspeccionar los datos en bruto de un envío (JSON)
+
+¿Necesitas consultar las coordenadas GPS exactas, la precisión en metros o los
+valores originales de un avistamiento concreto? Haz clic en **cualquier fila**
+de la tabla **Recent Submissions** (o en cualquier elemento del historial de
+**Tally Results**) para abrir el inspector **Submission**:
+
+![Ventana de inspección de un envío mostrando colaborador, fecha completa, vista previa de foto y estructura JSON](/img/dashboard-raw-submission.png)
+
+El inspector muestra:
+
+- **Contributor** — Nombre de usuario de quien envió el registro (o `Anonymous`
+  en formularios públicos).
+- **Submitted** — Fecha y hora completas de la observación.
+- **Datos estructurados** — Cada par clave-valor registrado, vistas previas de
+  las fotos adjuntas y el objeto `_location` (`latitude`, `longitude` y
+  `accuracy`) cuando el seguimiento GPS está activo.
+
+---
+
+## Exportar el conjunto completo de datos (.zip)
+
+Cuando quieras analizar tus resultados en R, Python, Excel o software SIG —o
+archivar una campaña de campo terminada—, los gestores pueden exportar toda la
+sesión con un solo clic:
+
+1. Abre el panel de la sesión.
+2. Haz clic en **Export Data** en la esquina superior derecha de **Recent
+   Submissions** (o **Tally Results**).
+3. FieldLog empaqueta y descarga un archivo `.zip` llamado
+   `field-log-<session-name>-export-<YYYY-MM-DD>.zip`.
+
+Al descomprimir el archivo obtendrás una estructura limpia y autónoma:
+
+```text
+field-log-trail-camera-log-export-2026-11-12/
+├── submissions.json   # Todas las observaciones, fechas, autores y coordenadas GPS
+└── images/            # Todas las fotografías de campo verificadas asociadas
+```
+
+Como `submissions.json` utiliza formato JSON UTF-8 estándar y la carpeta
+`images/` conserva los archivos de imagen originales verificados, tus datos
+están siempre listos para integrarse directamente en cualquier flujo de
+análisis.

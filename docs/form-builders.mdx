@@ -1,0 +1,112 @@
+---
+sidebar_position: 4
+---
+
+# Form Builders
+
+FieldLog includes three purpose-built form builders so you can match the tool to
+your field protocol—from simple camera-trap logs to rapid aerial wildlife counts
+and multi-page ecological surveys.
+
+## Choosing the right builder
+
+| Builder | Best for | Key capabilities |
+| --- | --- | --- |
+| **Basic (FormKit)** | Everyday field logs, transect sheets, camera-trap records | Fast question list, 16 input types, required validation, **File Upload** for field photos |
+| **Tally Counter** | Rapid species counts, point counts, aerial or roadside tallies | One-tap `+1` buttons, nested category groups, **6,400+ built-in wildlife icons** |
+| **Advanced (SurveyJS)** | Detailed multi-page protocols and structured questionnaires | Full-screen drag-and-drop visual studio, multi-page layouts, boolean switches, live preview tab |
+
+---
+
+## 1. Basic (FormKit)
+
+**Basic (FormKit)** is the fastest way to put together a clean, mobile-friendly
+observation form.
+
+![Building a form in Basic (FormKit) mode with text, dropdown choices, and file upload fields](/img/builder-formkit.png)
+
+### Add and configure questions
+
+1. Click **+ Add question** at the bottom of the field list.
+2. Type the field prompt under **Question** (for example, `Species Name`).
+3. Choose an input format under **Type**:
+   - **Text**: `Text`, `Text Area`, `Email`, `URL`, `Phone`, `Password`
+   - **Number**: `Number`, `Slider` *(lets you configure **Min**, **Max**, and
+     **Step**)*
+   - **Date & Time**: `Date`, `Time`, `Date & Time`
+   - **Choice**: `Dropdown`, `Radio Buttons`, `Checkbox`
+   - **Other**: `Color Picker`, `File Upload` *(for attaching field or
+     camera-trap photos)*
+4. Check **Required** if field workers must answer the question before
+   submitting.
+5. For **Dropdown** or **Radio Buttons**, click **+ Add choice** to list each
+   option, or click `×` beside an option to remove it.
+6. To delete a question, click the `×` button in the top-right corner of that
+   question's row.
+
+---
+
+## 2. Tally Counter
+
+**Tally Counter** replaces typing with large, touch-friendly tiles. Every tap in
+the field records a timestamped `+1` observation immediately—ideal when counting
+animals on the move or working in rain and gloves.
+
+### Organize items and nested groups
+
+You can place species tiles directly on the top level or organize them inside
+nested category folders (for example, `Mammals → Hoofed → Buffalo`):
+
+1. Click **+ Add Group** (or **+ Group** inside an existing group) to create a
+   category folder such as `Mammals` or `Waterfowl`.
+2. Click **+ Add Item** (or **+ Add** inside a group) to add a countable tile
+   such as `Buffalo`, `Elephant`, or `Zebra`.
+3. Hover over any tile and click `×` in its corner to remove it, or click the
+   tile itself to edit its label and icon.
+
+![The Tally Counter builder showing nested Mammals, Hoofed, and Carnivores groups with wildlife silhouettes](/img/builder-tally-grid.png)
+
+### Assign wildlife icons or custom images
+
+Clicking any item or group opens the **Edit Tally Item** dialog:
+
+1. Enter a clear **Label** (for example, `Buffalo`).
+2. Click the green **pencil button** on the circular preview to choose an image:
+   - **Wildlife icon** — Browse or search FieldLog's built-in library.
+   - **Image URL** — Paste any `https://` image link for custom reference photos.
+   - **Remove image** — Revert to a clean text-only tile.
+3. Click **Save**.
+
+![The Edit Tally Item dialog showing the pencil menu with Wildlife icon, Image URL, and Remove image options](/img/builder-tally-item-editor.png)
+
+### Search 6,400+ wildlife icons
+
+Selecting **Wildlife icon** opens the **Choose a Wildlife Icon** picker, powered
+by CyberTracker and aerial wildlife survey silhouettes:
+
+1. Type an animal, track, sign, or group name in the search box (such as
+   `elephant`, `heron`, or `tracks`).
+2. Click any silhouette card to assign it to your tally tile.
+
+![The Wildlife Icon Picker showing search results for elephant silhouettes and tracks](/img/builder-wildlife-icons.png)
+
+---
+
+## 3. Advanced (SurveyJS)
+
+Choose **Advanced (SurveyJS)** when your protocol needs multiple pages,
+rich question types, or visual drag-and-drop layout control.
+
+1. In Step 3 of the wizard (or on the **Edit Session** page), click **Open
+   Visual Editor**.
+2. Drag question types from the left toolbox onto your page—including text
+   inputs, dropdowns, checkboxes, rating scales, boolean Yes/No switches, and
+   more.
+3. Click any question on the canvas to configure its title, choices, validation,
+   and layout options in the right-hand properties panel.
+4. Switch to the **Preview** tab in the top-left corner at any time to test the
+   questionnaire interactively.
+5. Click **Done** in the top-right corner to return to FieldLog—your changes are
+   saved into the session automatically.
+
+![The full-screen SurveyJS visual form builder with toolbox, page canvas, and properties panel](/img/builder-surveyjs.png)

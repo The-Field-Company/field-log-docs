@@ -1,0 +1,117 @@
+---
+sidebar_position: 4
+---
+
+# Constructores de formularios
+
+FieldLog incluye tres constructores diseñados para distintos protocolos de
+campo: desde registros sencillos de cámaras trampa hasta conteos rápidos de
+fauna con iconos y encuestas ecológicas de varias páginas.
+
+## Cómo elegir el constructor adecuado
+
+| Constructor | Ideal para | Capacidades clave |
+| --- | --- | --- |
+| **Basic (FormKit)** | Registros diarios de campo, transectos, cámaras trampa | Lista rápida de preguntas, 16 tipos de entrada, campos obligatorios y **File Upload** para fotos |
+| **Tally Counter** | Conteos rápidos de especies, puntos de conteo, censos aéreos o en ruta | Botones táctiles `+1`, grupos de categorías anidados y **más de 6.400 iconos de fauna integrados** |
+| **Advanced (SurveyJS)** | Protocolos detallados de varias páginas y cuestionarios complejos | Editor visual a pantalla completa de arrastrar y soltar, páginas múltiples, interruptores Sí/No y pestaña de vista previa |
+
+---
+
+## 1. Basic (FormKit)
+
+**Basic (FormKit)** es la forma más rápida de crear un formulario limpio y
+cómodo de usar en dispositivos móviles.
+
+![Creación de un formulario en modo Basic (FormKit) con texto, opciones desplegables y subida de archivos](/img/builder-formkit.png)
+
+### Añadir y configurar preguntas
+
+1. Haz clic en **+ Add question** al final de la lista de campos.
+2. Escribe el enunciado en **Question** (por ejemplo, `Species Name`).
+3. Selecciona el formato en **Type**:
+   - **Text**: `Text`, `Text Area`, `Email`, `URL`, `Phone`, `Password`
+   - **Number**: `Number`, `Slider` *(permite definir **Min**, **Max** y
+     **Step**)*
+   - **Date & Time**: `Date`, `Time`, `Date & Time`
+   - **Choice**: `Dropdown`, `Radio Buttons`, `Checkbox`
+   - **Other**: `Color Picker`, `File Upload` *(para adjuntar fotografías de
+     campo o cámaras trampa)*
+4. Marca **Required** si la pregunta debe responderse obligatoriamente antes de
+   enviar.
+5. En campos **Dropdown** o **Radio Buttons**, haz clic en **+ Add choice** para
+   añadir cada opción o en `×` para quitarla.
+6. Para eliminar una pregunta completa, haz clic en el icono `×` arriba a la
+   derecha de esa fila.
+
+---
+
+## 2. Tally Counter
+
+**Tally Counter** sustituye la escritura por tarjetas grandes y fáciles de tocar.
+Cada toque en el campo registra al instante una observación `+1` con marca de
+tiempo: ideal para contar animales en movimiento o trabajar bajo la lluvia y con
+guantes.
+
+### Organizar elementos y grupos anidados
+
+Puedes colocar tarjetas de especies directamente en el nivel principal u
+organizarlas dentro de carpetas anidadas (por ejemplo,
+`Mammals → Hoofed → Buffalo`):
+
+1. Haz clic en **+ Add Group** (o en **+ Group** dentro de un grupo existente)
+   para crear una categoría como `Mammals` o `Waterfowl`.
+2. Haz clic en **+ Add Item** (o en **+ Add** dentro de un grupo) para añadir un
+   elemento contable como `Buffalo`, `Elephant` o `Zebra`.
+3. Pasa el cursor sobre cualquier tarjeta y pulsa `×` en la esquina para
+   eliminarla, o haz clic sobre la tarjeta para editar su etiqueta e icono.
+
+![Constructor Tally Counter mostrando grupos anidados de mamíferos, ungulados y carnívoros con siluetas de fauna](/img/builder-tally-grid.png)
+
+### Asignar iconos de fauna o imágenes personalizadas
+
+Al hacer clic en cualquier elemento o grupo se abre la ventana **Edit Tally
+Item**:
+
+1. Escribe un nombre claro en **Label** (por ejemplo, `Buffalo`).
+2. Haz clic en el **botón verde del lápiz** sobre el círculo de vista previa
+   para elegir una imagen:
+   - **Wildlife icon** — Busca en la biblioteca integrada de FieldLog.
+   - **Image URL** — Pega cualquier enlace `https://` de una imagen de
+     referencia propia.
+   - **Remove image** — Deja la tarjeta solo con texto.
+3. Haz clic en **Save**.
+
+![Ventana Edit Tally Item mostrando el menú del lápiz con opciones Wildlife icon, Image URL y Remove image](/img/builder-tally-item-editor.png)
+
+### Buscar entre más de 6.400 iconos de fauna
+
+Al seleccionar **Wildlife icon** se abre el selector **Choose a Wildlife Icon**,
+basado en las siluetas de CyberTracker y censos aéreos de fauna:
+
+1. Escribe en el buscador el nombre de un animal, huella, rastro o grupo (en
+   inglés, como `elephant`, `heron` o `tracks`).
+2. Haz clic sobre cualquier silueta para asignarla a tu tarjeta de conteo.
+
+![Selector de iconos de fauna mostrando resultados de búsqueda para elefantes y huellas](/img/builder-wildlife-icons.png)
+
+---
+
+## 3. Advanced (SurveyJS)
+
+Elige **Advanced (SurveyJS)** cuando tu protocolo requiera varias páginas,
+controles avanzados o diseño visual de arrastrar y soltar.
+
+1. En el Paso 3 del asistente (o desde **Edit Session**), haz clic en **Open
+   Visual Editor**.
+2. Arrastra tipos de pregunta desde la barra lateral izquierda hacia la página:
+   campos de texto, listas desplegables, casillas, escalas de valoración,
+   interruptores Sí/No y más.
+3. Haz clic en cualquier pregunta del lienzo para ajustar su título, opciones,
+   validaciones y diseño en el panel de propiedades de la derecha.
+4. Cambia a la pestaña **Preview** arriba a la izquierda en cualquier momento
+   para probar el cuestionario de forma interactiva.
+5. Haz clic en **Done** arriba a la derecha para volver a FieldLog; todos los
+   cambios quedan guardados en la sesión automáticamente.
+
+![Editor visual SurveyJS a pantalla completa con barra de herramientas, lienzo y panel de propiedades](/img/builder-surveyjs.png)

@@ -1,0 +1,118 @@
+---
+sidebar_position: 3
+---
+
+# Creating & Managing Sessions
+
+A **Session** in FieldLog represents a single data-collection project—such as a
+weekly bird transect, a night amphibian census, or a camera-trap log. Managers
+create sessions in four quick steps and control every aspect of the survey from
+the session dashboard.
+
+## Create a new session
+
+Click **New Session** in the top navigation bar to open the 4-step session
+wizard.
+
+### Step 1: Details
+
+Give your session a clear title, describe the protocol for your field team, and
+choose whether to record GPS coordinates:
+
+1. Enter a **Session Name** (required), such as `Wetland Bird Transect`.
+2. Add an optional **Description** explaining what or where to sample.
+3. Check **Track GPS location with submissions** if you want FieldLog to capture
+   device coordinates with every observation and plot them on a map.
+4. Click **Next**.
+
+![Step 1 of the New Session wizard with name, description, and GPS tracking enabled](/img/wizard-step-1-details.png)
+
+### Step 2: Form Type
+
+Pick the form builder that matches how your team records data in the field, then
+click **Next**:
+
+- **Basic (FormKit)** — Clean, fast list of standard inputs (text, numbers,
+  dropdowns, dates, checkboxes, sliders, and photo uploads).
+- **Advanced (SurveyJS)** — Full visual drag-and-drop survey studio for complex
+  or multi-page questionnaires.
+- **Tally Counter** — Tap-to-count species grid with nested category folders and
+  built-in wildlife icons.
+
+![Step 2 of the New Session wizard showing the three form type options](/img/wizard-step-2-form-type.png)
+
+### Step 3: Builder
+
+Add and configure the questions or tally items for your form, then click
+**Next**. See the dedicated [Form Builders](./form-builders) guide for a full
+walkthrough of all three builders.
+
+### Step 4: Confirm
+
+Review your session settings—**Name**, **Description**, **GPS Tracking**,
+**Form Type**, and total **Fields** count. Need to adjust anything? Click
+**Back** to return to an earlier step without losing your work.
+
+When everything looks right, click **Create Session**.
+
+![Step 4 of the New Session wizard reviewing the session summary before creation](/img/wizard-step-4-confirm.png)
+
+:::note Default visibility
+New sessions start **Active** (open for submissions) and **Private** (visible
+only to managers and invited members) so you can test your form before opening
+it to a wider audience.
+:::
+
+## Tour the session dashboard
+
+Click any session in your **Sessions** list to open its dashboard:
+
+![The Session Dashboard showing live metrics, Form Settings toggles, members, and recent submissions](/img/session-dashboard-overview.png)
+
+At the top of the dashboard, two summary cards give you instant visibility and
+control:
+
+- **Overview card (left)**:
+  - **Submissions** — Total observations recorded so far.
+  - **Contributors** — Number of unique people who have submitted data.
+  - **Last Activity** — Relative time since the latest entry (for example,
+    `Just now` or `19h ago`).
+  - **Share** — Generate a shareable link and QR code (see
+    [Sharing, Invites & Subscriptions](./sharing-and-access)).
+  - **Add Submission** — Open the live form to record a new entry yourself.
+- **Form Settings card (right)** *(Managers only)*:
+  - **Preview** and **Edit** buttons in the header.
+  - **Active** and **Public** toggle switches.
+  - **Members** list (shown when the session is private).
+
+## Preview your form
+
+Want to verify how your form looks before sending a team into the field? Click
+**Preview** in the **Form Settings** card.
+
+![Form Preview mode showing how field workers see the form](/img/form-preview.png)
+
+Preview mode renders the exact layout field workers see—with a **Preview**
+banner at the top and the submit bar hidden so you don't record test data by
+accident. Click **Back to session** to return to the dashboard.
+
+## Edit an existing session
+
+To update a session's title, description, GPS setting, or form questions:
+
+1. Open the session dashboard and click **Edit** in the **Form Settings** card.
+2. Modify any details or add, edit, and remove questions on a single page.
+3. Click **Update Session** in the bottom-right footer.
+
+![The Edit Session page showing session metadata and form fields in a single view](/img/edit-session.png)
+
+## Open, pause, or change visibility
+
+Managers can change session access at any time using the switches under
+**Form Settings**:
+
+- **Active** — Turn **ON** to accept new submissions, or switch **OFF** when a
+  field season ends to freeze the dataset and prevent further entries.
+- **Public** — Turn **ON** so anyone with the link can view and submit (even
+  without an account), or keep **OFF** to restrict the session to invited team
+  members.
