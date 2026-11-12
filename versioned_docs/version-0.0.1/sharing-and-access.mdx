@@ -1,0 +1,103 @@
+---
+sidebar_position: 5
+---
+
+# Sharing, Invites & Subscriptions
+
+Once your session is ready, you can distribute it to field workers—or open it to
+citizen scientists—using QR codes, expiring invite links, direct member
+assignment, and subscriptions.
+
+## Public vs. Private sessions
+
+Managers control who can access a session with the **Public** switch under
+**Form Settings** on the session dashboard:
+
+| Setting | Who can view & submit | How to share |
+| --- | --- | --- |
+| **Public** (`ON`) | Anyone with the link—including people **without** a FieldLog account (recorded as `Anonymous`). Appears in **Sessions** for all signed-in users. | Direct session link & QR code |
+| **Private** (`OFF`) | Only Managers and authorized session **Members**. Hidden from everyone else. | 7-day expiring invite link/QR code, or adding members directly |
+
+---
+
+## Share a public session via QR code or link
+
+For public surveys, volunteers and field technicians can scan a QR code on a
+clipboard, trailhead sign, or briefing slide and start submitting right away:
+
+1. Open the session dashboard and make sure **Public** is toggled **ON**.
+2. Click **Share** on the left overview card.
+3. Show the **QR code** for phones to scan, or click **Copy Link** to paste the
+   URL into a message or email.
+
+![The Share Session modal for a public session showing a QR code and direct session URL](/img/share-public-qr.png)
+
+---
+
+## Invite people to a private session
+
+When **Public** is toggled **OFF**, clicking **Share** automatically generates a
+secure **7-day invite token** instead of a public URL:
+
+1. On your private session dashboard, click **Share**.
+2. Scan the QR code or click **Copy Link** to share the `/invite/<token>` URL
+   with your team.
+
+![The Share Session modal for a private session showing a 7-day expiring invite link and QR code](/img/share-private-invite-qr.png)
+
+### How field workers accept an invite
+
+When a teammate opens your invite link (or scans the QR code):
+
+1. They see the session name, description, and invite expiration date.
+2. If they aren't signed in yet, FieldLog prompts them to **Log in** first and
+   returns them right back to the invite.
+3. Clicking **Join Session** adds them as a session member and opens the session
+   dashboard immediately.
+
+![The session invitation screen with session details, expiration date, and Join Session button](/img/invite-accept.png)
+
+:::tip Expired links
+Invite links expire automatically after **7 days**. If a link expires before
+everyone joins, just click **Share** again on the dashboard to generate a fresh
+7-day invite.
+:::
+
+---
+
+## Add or remove private members directly
+
+If your teammates already have FieldLog accounts, you can add or revoke their
+access directly on a private session's dashboard—no invite link required:
+
+1. Ensure **Public** is switched **OFF** so the **Members** box appears under
+   **Form Settings**.
+2. Start typing a teammate's username or email address into **Add members…**.
+3. Click their name in the dropdown list to grant access immediately. Each
+   member appears as a colored pill.
+4. To remove someone from a private session, click the `×` on their name pill.
+   Their access is revoked right away.
+
+![Adding team members to a private session using the autocomplete search box](/img/private-members.png)
+
+---
+
+## Keep track of active work with Subscriptions
+
+The **Subscriptions** page gives field workers a focused launchpad for the
+surveys they actively participate in—without hunting through long session lists.
+
+- **Private sessions** you join (via invite or manager assignment) appear in
+  **Subscriptions** automatically.
+- **Public sessions** have a **Subscribe** button under **Form Settings** on the
+  session dashboard so you can pin them to your list too.
+
+Click **Subscriptions** in the top navigation bar to view all your subscribed
+sessions:
+
+![The Subscriptions page showing subscribed sessions with Open Form and Unsubscribe actions](/img/subscriptions-page.png)
+
+- Click **Open Form** to jump straight into data entry in the field.
+- Click the **session title** to view its dashboard and recent submissions.
+- Click **Unsubscribe** when you're done participating in a survey to remove it
+  from your list.

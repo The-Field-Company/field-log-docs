@@ -1,23 +1,81 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Primeros pasos
 
-Bienvenido a la documentación de FieldLog.
+FieldLog ayuda a los equipos de investigación a diseñar formularios de
+observación, abrirlos en teléfonos en el campo, registrar avistamientos con
+fotos y GPS —incluso sin conexión— y exportar conjuntos de datos limpios al
+terminar el muestreo.
 
-Estas guías te explican cómo configurar tu primera sesión, recopilar
-observaciones en el campo y exportar tus datos cuando termines el trabajo.
+## Cómo funciona FieldLog
 
-## Crear una sesión
+1. **Crea una sesión** — Elige el tipo de formulario (campos estándar, encuesta
+   multipágina o conteo rápido de fauna) y configura las preguntas necesarias.
+2. **Comparte con tu equipo** — Envía un enlace directo, imprime un código QR o
+   invita a miembros específicos a una sesión privada.
+3. **Recopila en el campo** — Abre el formulario desde cualquier teléfono o
+   portátil para registrar observaciones, adjuntar fotos de cámaras trampa o de
+   campo y capturar coordenadas GPS automáticamente.
+4. **Revisa y exporta** — Consulta conteos en vivo, visualiza los registros en
+   un mapa interactivo, revisa las fotografías y descarga todo en un archivo
+   `.zip`.
 
-Crea tu formulario, arrastra los campos al lienzo y publícalo.
+## Iniciar sesión en tu cuenta
 
-## Desplegar en el campo
+Una vez configurada tu cuenta (consulta [Solicitar acceso](./request-access)),
+inicia sesión para abrir tu espacio de trabajo:
 
-Comparte un enlace o un código QR para que tu equipo abra el formulario en
-cualquier teléfono.
+1. Ve a [fieldlog.thefieldco.com/login](https://fieldlog.thefieldco.com/login).
+2. Introduce tu **Username** y tu **Password**.
+3. Haz clic en **Sign in**.
 
-## Recopilar datos
+![Pantalla de inicio de sesión de FieldLog](/img/sign-in.png)
 
-Las respuestas llegan con GPS, fotos y marcas de tiempo.
+FieldLog mantiene tu sesión iniciada automáticamente en el navegador. Haz clic
+en **Logout** arriba a la derecha cuando quieras cerrar sesión en un dispositivo
+compartido.
+
+## Tu espacio de trabajo
+
+Al iniciar sesión, accedes directamente a la lista de **Sessions**:
+
+![Lista de sesiones mostrando proyectos activos y número de envíos](/img/sessions-list.png)
+
+Desde la barra superior puedes acceder a todo con un solo clic:
+
+- **New Session** *(solo gestores)* — Abre el asistente de 4 pasos para crear
+  una nueva encuesta o conteo.
+- **Sessions** — Explora todas las sesiones públicas y las sesiones privadas a
+  las que perteneces, junto con el total de envíos.
+- **Subscriptions** — Accede directamente a los formularios en los que colaboras
+  activamente.
+- **Logout** — Cierra tu sesión.
+
+## Roles de usuario
+
+Lo que puedes ver y hacer en FieldLog depende de tu rol:
+
+| Rol | Qué puede hacer |
+| --- | --- |
+| **Gestor** *(Manager)* | Crear y editar sesiones, cambiar entre **Active** e inactiva o **Public** y privada, gestionar miembros, generar códigos QR y enlaces de invitación, enviar datos y exportar archivos `.zip`. |
+| **Trabajador de campo** *(Submitter)* | Explorar sesiones públicas, unirse a sesiones privadas mediante invitación o asignación directa, suscribirse a sesiones y enviar observaciones (con o sin conexión). |
+| **Anónimo** *(Sin cuenta)* | Abrir cualquier enlace o código QR de una sesión **Public** activa y enviar observaciones sin iniciar sesión. |
+
+## Siguientes pasos
+
+Sigue las guías en orden o salta directamente al tema que necesites:
+
+- [Crear y gestionar sesiones](./creating-sessions) — Configura una nueva
+  sesión, previsualiza formularios, edita campos y controla el estado.
+- [Constructores de formularios](./form-builders) — Aprende a usar **Basic
+  (FormKit)**, **Tally Counter** (con más de 6.400 iconos de fauna) y
+  **Advanced (SurveyJS)**.
+- [Compartir, invitaciones y suscripciones](./sharing-and-access) — Genera
+  códigos QR, envía invitaciones privadas de 7 días y gestiona tu equipo.
+- [Recopilar datos en el campo](./collecting-data) — Envía formularios, usa el
+  contador táctil de fauna, adjunta fotos, captura GPS y trabaja sin señal.
+- [Revisar y exportar datos](./reviewing-and-exporting) — Explora el mapa GPS,
+  amplía fotos de campo, inspecciona el JSON sin procesar y descarga
+  exportaciones.

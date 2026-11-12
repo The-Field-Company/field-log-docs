@@ -1,0 +1,118 @@
+---
+sidebar_position: 6
+---
+
+# Recopilar datos en el campo
+
+Los formularios de FieldLog funcionan en cualquier navegador móvil o de
+escritorio —y siguen funcionando cuando pierdes cobertura lejos de la antena más
+cercana—.
+
+## Abrir un formulario para registrar observaciones
+
+Puedes abrir el formulario de envío de una sesión de varias maneras:
+
+- Desde **Subscriptions**, haz clic en **Open Form** junto a la sesión.
+- Desde el **panel de la sesión**, haz clic en **Add Submission**.
+- Escanea un **código QR** o abre directamente un enlace `/sessions/<id>/submit`
+  en tu teléfono.
+
+---
+
+## Rellenar formularios Basic y SurveyJS
+
+### Formularios Basic (FormKit)
+
+Introduce los datos de tu observación en cada campo y pulsa **Submit** en la
+barra inferior:
+
+![Rellenando un formulario de observación de aves con especie, hábitat, conteo y notas de campo](/img/collect-standard-form.png)
+
+- Si has **iniciado sesión**, al guardar volverás al panel de la sesión con la
+  confirmación `Submission saved`.
+- Si envías datos de forma **anónima** en un formulario público, los campos se
+  limpian automáticamente para que puedas registrar el siguiente avistamiento al
+  instante.
+
+### Encuestas Advanced (SurveyJS)
+
+Los cuestionarios SurveyJS muestran cada pregunta en tarjetas claras con
+navegación integrada entre páginas. Responde las preguntas y pulsa **Complete**
+al final de la última página para guardar el registro:
+
+![Formulario de censo de anfibios creado con SurveyJS](/img/collect-surveyjs.png)
+
+---
+
+## Contar fauna rápidamente con Tally Counter
+
+Las sesiones de conteo están pensadas para registrar avistamientos a gran
+velocidad sin escribir ni recargar la página:
+
+1. Si la sesión utiliza carpetas de categorías (indicadas con `▾`), toca una
+   carpeta como **Mammals** y luego **Hoofed** para entrar en ella.
+2. Usa la ruta de navegación superior (`All / Mammals / Hoofed`) para subir a
+   cualquier grupo anterior o volver al inicio con un toque.
+3. Toca cualquier tarjeta de especie —como **Buffalo** o **Elephant**— cada vez
+   que observes un individuo.
+
+![Formulario Tally Counter dentro de All / Mammals / Hoofed mostrando tarjetas táctiles de fauna](/img/collect-tally-groups.png)
+
+Cada toque muestra `+1` en la tarjeta, guarda al instante una observación con
+fecha y hora (y coordenadas GPS si están activadas), muestra un aviso breve
+`+1 Buffalo` y mantiene la cuadrícula en pantalla lista para el siguiente
+avistamiento.
+
+---
+
+## Adjuntar fotos y capturar coordenadas GPS
+
+Cuando una sesión incluye un campo **File Upload** o tiene activada la opción
+**Track GPS location with submissions**, FieldLog gestiona las imágenes y la
+ubicación automáticamente:
+
+![Registro de cámara trampa con subida de fotografía y el indicador verde Location captured](/img/collect-photo-gps.png)
+
+### Adjuntar fotos de campo o cámaras trampa
+
+1. Toca el campo **Photo** (subida de archivo).
+2. En un teléfono o tableta, toma una foto directamente con la cámara o elige
+   una imagen de la galería (hasta **10 MB** por imagen).
+3. Pulsa **Submit**: FieldLog sube y verifica cada imagen de forma segura y la
+   vincula a tu observación.
+
+### Captura automática de GPS
+
+1. La primera vez que abras un formulario con GPS activado, concede permiso de
+   ubicación cuando el navegador lo solicite.
+2. Observa el indicador en la esquina inferior derecha:
+   - `Acquiring location...` — Obteniendo una señal GPS de alta precisión.
+   - `Location captured` *(en verde)* — La latitud, longitud y precisión (en
+     metros) están listas y se guardarán junto con tu envío.
+   - `Location unavailable` — Se denegó el permiso o el dispositivo no dispone
+     de GPS; igualmente puedes enviar tu observación sin coordenadas.
+
+---
+
+## Trabajar sin conexión en zonas remotas
+
+El trabajo de campo rara vez ocurre junto a una red Wi-Fi estable. Cuando has
+**iniciado sesión**, FieldLog utiliza una base de datos local sin conexión
+(**PowerSync**) directamente en tu navegador:
+
+1. **Abre tu sesión mientras aún tengas señal** (en el campamento, la oficina o
+   el inicio del sendero) para que el formulario y la base de datos local queden
+   listos en tu dispositivo.
+2. **Sigue enviando observaciones sin cobertura** — Los registros se guardan de
+   inmediato en el almacenamiento local del dispositivo sin esperas, incluso en
+   modo avión.
+3. **Sincronización automática en segundo plano** — En cuanto el teléfono
+   recupera conexión, FieldLog sube automáticamente todas las observaciones
+   pendientes al servidor.
+
+:::tip Instala FieldLog en la pantalla de inicio de tu teléfono
+FieldLog es una aplicación web progresiva (PWA). En Safari para iOS
+(**Compartir → Añadir a pantalla de inicio**) o en Chrome para Android (**Menú →
+Instalar aplicación / Añadir a pantalla de inicio**), puedes instalar FieldLog
+como un icono a pantalla completa para abrirlo al instante en el campo.
+:::

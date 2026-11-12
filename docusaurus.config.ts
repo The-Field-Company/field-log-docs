@@ -51,6 +51,9 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/The-Field-Company/field-log-docs/tree/master/',
+          // Publish only the frozen alpha release. The `docs/` folder stays as
+          // the working copy for the next release, but is not served.
+          includeCurrentVersion: false,
           versions: {
             '0.0.1': {
               label: 'v0.0.1 (alpha)',

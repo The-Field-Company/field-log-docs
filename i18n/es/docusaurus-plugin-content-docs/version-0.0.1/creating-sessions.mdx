@@ -1,0 +1,124 @@
+---
+sidebar_position: 3
+---
+
+# Crear y gestionar sesiones
+
+Una **sesión** en FieldLog representa un proyecto de recopilación de datos —por
+ejemplo, un transecto semanal de aves, un censo nocturno de anfibios o un
+registro de cámaras trampa—. Los gestores crean sesiones en cuatro pasos rápidos
+y controlan cada aspecto del muestreo desde el panel de la sesión.
+
+## Crear una nueva sesión
+
+Haz clic en **New Session** en la barra de navegación superior para abrir el
+asistente de 4 pasos.
+
+### Paso 1: Detalles (Details)
+
+Asigna un título claro a la sesión, describe el protocolo para tu equipo de
+campo y elige si deseas registrar coordenadas GPS:
+
+1. Escribe el nombre en **Session Name** (obligatorio), por ejemplo
+   `Wetland Bird Transect`.
+2. Añade una descripción opcional en **Description** indicando qué o dónde
+   muestrear.
+3. Marca **Track GPS location with submissions** si quieres que FieldLog guarde
+   las coordenadas del dispositivo en cada observación y las muestre en el mapa.
+4. Haz clic en **Next**.
+
+![Paso 1 del asistente de nueva sesión con nombre, descripción y seguimiento GPS activado](/img/wizard-step-1-details.png)
+
+### Paso 2: Tipo de formulario (Form Type)
+
+Elige el constructor que mejor se adapte a cómo tu equipo toma datos en el campo
+y haz clic en **Next**:
+
+- **Basic (FormKit)** — Lista ágil de campos estándar (texto, números, listas
+  desplegables, fechas, casillas, controles deslizantes y subida de fotos).
+- **Advanced (SurveyJS)** — Estudio visual de arrastrar y soltar para encuestas
+  estructuradas o de varias páginas.
+- **Tally Counter** — Cuadrícula táctil de conteo rápido con grupos anidados e
+  iconos de fauna integrados.
+
+![Paso 2 del asistente mostrando las tres opciones de tipo de formulario](/img/wizard-step-2-form-type.png)
+
+### Paso 3: Constructor (Builder)
+
+Añade y configura las preguntas o casillas de conteo de tu formulario y haz clic
+en **Next**. Consulta la guía completa de
+[Constructores de formularios](./form-builders) para ver cada opción en detalle.
+
+### Paso 4: Confirmar (Confirm)
+
+Revisa el resumen de la sesión: **Name**, **Description**, **GPS Tracking**,
+**Form Type** y el total de campos (**Fields**). Si necesitas cambiar algo, haz
+clic en **Back** para volver a un paso anterior sin perder tu configuración.
+
+Cuando todo esté listo, haz clic en **Create Session**.
+
+![Paso 4 del asistente revisando el resumen antes de crear la sesión](/img/wizard-step-4-confirm.png)
+
+:::note Visibilidad inicial
+Las sesiones nuevas comienzan como **Active** (abiertas a envíos) y **privadas**
+(visibles solo para gestores y miembros invitados) para que puedas probar el
+formulario antes de abrirlo a más personas.
+:::
+
+## Recorrido por el panel de la sesión
+
+Haz clic en cualquier sesión de la lista **Sessions** para abrir su panel:
+
+![Panel de la sesión con métricas en vivo, ajustes de formulario, miembros y envíos recientes](/img/session-dashboard-overview.png)
+
+En la parte superior del panel encontrarás dos tarjetas principales:
+
+- **Tarjeta de resumen (izquierda)**:
+  - **Submissions** — Total de observaciones registradas hasta el momento.
+  - **Contributors** — Número de personas distintas que han enviado datos.
+  - **Last Activity** — Tiempo transcurrido desde el último registro (por
+    ejemplo, `Just now` o `19h ago`).
+  - **Share** — Genera un enlace compartible y un código QR (consulta
+    [Compartir, invitaciones y suscripciones](./sharing-and-access)).
+  - **Add Submission** — Abre el formulario para registrar una observación.
+- **Tarjeta Form Settings (derecha)** *(solo gestores)*:
+  - Botones **Preview** y **Edit** en el encabezado.
+  - Interruptores **Active** y **Public**.
+  - Lista **Members** (visible cuando la sesión es privada).
+
+## Previsualizar el formulario
+
+¿Quieres comprobar cómo se ve el formulario antes de salir al campo? Haz clic en
+**Preview** dentro de la tarjeta **Form Settings**.
+
+![Modo de vista previa mostrando el formulario tal como lo ven los trabajadores de campo](/img/form-preview.png)
+
+El modo de vista previa muestra exactamente el diseño que verá el equipo —con un
+aviso **Preview** en la parte superior y sin barra de envío para evitar guardar
+datos de prueba por error—. Haz clic en **Back to session** para volver al
+panel.
+
+## Editar una sesión existente
+
+Para cambiar el nombre, la descripción, el ajuste de GPS o las preguntas de una
+sesión:
+
+1. Abre el panel de la sesión y haz clic en **Edit** dentro de **Form
+   Settings**.
+2. Modifica cualquier dato o añade, edita y elimina preguntas desde una sola
+   vista.
+3. Haz clic en **Update Session** abajo a la derecha.
+
+![Página Edit Session mostrando los metadatos y los campos del formulario en una vista unificada](/img/edit-session.png)
+
+## Abrir, pausar o cambiar la visibilidad
+
+Los gestores pueden modificar el acceso en cualquier momento con los
+interruptores de **Form Settings**:
+
+- **Active** — Déjalo **activado** para aceptar envíos nuevos o **desactívalo**
+  al cerrar una campaña de campo para congelar los datos e impedir nuevos
+  registros.
+- **Public** — **Actívalo** para que cualquier persona con el enlace pueda ver y
+  enviar datos (incluso sin cuenta), o déjalo **desactivado** para limitar el
+  acceso únicamente a los miembros invitados.

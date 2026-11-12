@@ -1,0 +1,100 @@
+---
+sidebar_position: 7
+---
+
+# Reviewing & Exporting Data
+
+As observations arrive from the field, the **Session Dashboard** organizes GPS
+locations, photos, species counts, and raw records in one place—and lets
+managers export everything as a portable `.zip` archive.
+
+## Explore sightings on the interactive map
+
+Whenever a session has **Track GPS location with submissions** enabled, a
+**Submission Locations** card appears on the dashboard showing how many records
+include coordinates (for example, `5 of 5 with GPS`):
+
+![The Session Dashboard showing the interactive OpenStreetMap GPS pin map above recent photo submissions](/img/dashboard-map.png)
+
+- **Zoom and pan** using the `+` / `−` controls or touch gestures to inspect
+  transects, plots, or camera stations on OpenStreetMap.
+- **Click any blue pin** to open a popup with the **contributor's username** and
+  exact **submission timestamp**.
+
+---
+
+## Browse recent submissions and field photos
+
+On **Basic (FormKit)** and **Advanced (SurveyJS)** sessions, the **Recent
+Submissions** table displays the latest observations with columns matching each
+question in your form.
+
+When submissions include uploaded photos, thumbnail previews appear right inside
+the table. Click any thumbnail to open the full-resolution **Photo Viewer**:
+
+![The full-screen photo viewer lightbox displaying a camera-trap lion photo, file size, and Open original link](/img/dashboard-photo-viewer.png)
+
+From the viewer you can check the file name and size (for example, `84 KB`),
+click **Open original** to open the full image in a new browser tab, or press
+`Esc` / `✕` to close.
+
+---
+
+## Review Tally Counter totals and activity
+
+For **Tally Counter** sessions, the dashboard replaces the table with **Tally
+Results**:
+
+![Tally Results showing aggregated species counts organized by Mammals and Birds groups above the live activity feed](/img/dashboard-tally-results.png)
+
+- **Aggregated summary grid (top)** — Totals every tap per species, neatly
+  organized under your nested category groups (such as `Mammals → Hoofed` and
+  `Birds → Waterfowl`).
+- **Chronological activity feed (bottom)** — Lists every individual tap with who
+  recorded it, the species and group path, and when it came in.
+
+---
+
+## Inspect raw submission data (JSON)
+
+Need to check exact GPS coordinates, accuracy in meters, or raw field values for
+a specific sighting? Click **any row** in the **Recent Submissions** table (or
+any line in the **Tally Results** activity feed) to open the **Submission**
+inspector:
+
+![The Submission inspector modal showing contributor, full timestamp, embedded photo preview, and raw JSON fields](/img/dashboard-raw-submission.png)
+
+The inspector shows:
+
+- **Contributor** — Username of the field worker (or `Anonymous` on public
+  forms).
+- **Submitted** — Full date and time of the observation.
+- **Structured payload** — Every recorded key-value field, inline image
+  previews for photo attachments, and `_location` (`latitude`, `longitude`, and
+  `accuracy`) when GPS tracking is active.
+
+---
+
+## Export your complete dataset (.zip)
+
+When you're ready to analyze your results in R, Python, Excel, or GIS software—or
+archive a completed field season—managers can export the entire session in one
+click:
+
+1. Open the session dashboard.
+2. Click **Export Data** in the top-right corner of **Recent Submissions** (or
+   **Tally Results**).
+3. FieldLog packages and downloads a `.zip` file named
+   `field-log-<session-name>-export-<YYYY-MM-DD>.zip`.
+
+Unzipping the archive gives you a clean, self-contained folder structure:
+
+```text
+field-log-trail-camera-log-export-2026-11-12/
+├── submissions.json   # All observations, timestamps, contributors & GPS coords
+└── images/            # Every confirmed field photo attached to those records
+```
+
+Because `submissions.json` uses standard UTF-8 JSON and `images/` stores the
+original verified image files, your data is never locked in and drops straight
+into any analysis pipeline.

@@ -1,0 +1,110 @@
+---
+sidebar_position: 6
+---
+
+# Collecting Data in the Field
+
+FieldLog forms work in any mobile or desktop browser—and keep working when your
+signal drops miles from the nearest cell tower.
+
+## Open a form to record observations
+
+You can reach a session's submission form in several ways:
+
+- From **Subscriptions**, click **Open Form** beside the session.
+- From a **Session Dashboard**, click **Add Submission**.
+- Scan a **QR code** or open a shared `/sessions/<id>/submit` link directly on
+  your phone.
+
+---
+
+## Fill out Basic and SurveyJS forms
+
+### Basic (FormKit) forms
+
+Enter your observation details into each field and tap **Submit** in the bottom
+footer bar:
+
+![Filling out a Bird Survey observation form with species, habitat, count, and field notes](/img/collect-standard-form.png)
+
+- If you are **signed in**, saving returns you to the session dashboard with a
+  `Submission saved` confirmation.
+- If you are submitting **anonymously** on a public form, the form clears itself
+  automatically so you can immediately enter the next sighting.
+
+### Advanced (SurveyJS) surveys
+
+Multi-question and multi-page SurveyJS forms display each prompt in clean cards
+with built-in page navigation. Answer the questions and tap **Complete** at the
+bottom of the final page to record your response:
+
+![Filling out an Amphibian Census form built with SurveyJS](/img/collect-surveyjs.png)
+
+---
+
+## Count wildlife rapidly with Tally Counter
+
+Tally sessions are designed for fast, heads-up counting without typing or page
+reloads:
+
+1. If your session uses category folders (marked with a `▾` arrow), tap a folder
+   such as **Mammals** and then **Hoofed** to drill down.
+2. Use the breadcrumb trail at the top (`All / Mammals / Hoofed`) to jump back
+   up to any parent folder or top-level view in one tap.
+3. Tap any species tile—such as **Buffalo** or **Elephant**—each time you spot
+   one.
+
+![A Tally Counter form drilled into All / Mammals / Hoofed showing tap-to-count wildlife cards](/img/collect-tally-groups.png)
+
+Every tap flashes `+1` on the card, saves an individual timestamped observation
+(with GPS coordinates if enabled), shows a brief `+1 Buffalo` confirmation
+toast, and leaves you right on the grid ready for your next sighting.
+
+---
+
+## Attach photos and capture GPS coordinates
+
+When a session includes a **File Upload** field or has **Track GPS location with
+submissions** enabled, FieldLog handles media and coordinates automatically:
+
+![Recording a camera-trap observation with photo upload and the green Location captured badge](/img/collect-photo-gps.png)
+
+### Attaching field or camera-trap photos
+
+1. Tap the **Photo** (file upload) field.
+2. On a phone or tablet, take a photo directly with your camera or pick an
+   existing image from your gallery (up to **10 MB** per image).
+3. Tap **Submit**—FieldLog uploads and verifies each image securely and links it
+   to your observation.
+
+### Automatic GPS capture
+
+1. The first time you open a GPS-enabled form, allow location access when your
+   browser asks for permission.
+2. Watch the status pill in the bottom-right corner:
+   - `Acquiring location...` — Waiting for a high-accuracy GPS fix.
+   - `Location captured` *(green)* — Latitude, longitude, and accuracy (in
+     meters) are locked in and will be saved with your submission.
+   - `Location unavailable` — Location permission was denied or the device has
+     no GPS receiver; you can still submit your observation without coordinates.
+
+---
+
+## Working offline in remote areas
+
+Fieldwork rarely happens next to reliable Wi-Fi. When you are **signed in**,
+FieldLog uses a local offline database (**PowerSync**) right inside your
+browser:
+
+1. **Open your session while you still have a signal** (at camp, the office, or
+   the trailhead) so the form and local database initialize on your device.
+2. **Keep submitting observations offline** — Entries save straight to your
+   device's local storage with zero lag, even in airplane mode or dead zones.
+3. **Automatic background sync** — As soon as your phone regains a connection,
+   FieldLog uploads all queued observations to the server automatically.
+
+:::tip Add FieldLog to your phone's home screen
+FieldLog is a Progressive Web App (PWA). On iOS Safari (**Share → Add to Home
+Screen**) or Android Chrome (**Menu → Install app / Add to Home screen**), you
+can install FieldLog as a full-screen app icon for instant access in the field.
+:::
