@@ -1,30 +1,81 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * FieldLog global styles.
+ *
+ * Infima is bundled by the classic theme; we override its variables to
+ * match the FieldLog brand and self-host the brand typefaces.
  */
 
-/* You can override the default Infima variables here. */
+@font-face {
+  font-family: 'Salted';
+  src: url('/fonts/salted.otf') format('opentype'),
+    url('/fonts/salted_fallback.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('/fonts/Brandon-Grotesque/Brandon-Grotesque-Regular.otf')
+    format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('/fonts/Brandon-Grotesque/Brandon-Grotesque-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('/fonts/Brandon-Grotesque/Brandon-Grotesque-Bold.otf')
+    format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* FieldLog brand palette */
+  --fl-accent: #06311b;
+  --fl-accent-hover: #0a4a29;
+  --fl-accent-light: #e6f100;
+  --fl-gradient-start: #042315;
+  --fl-gradient-mid: #06311b;
+  --fl-gradient-end: #0a4a29;
+  --fl-text-primary: #1d1d1f;
+  --fl-text-secondary: #6e6e73;
+
+  --fl-header-font: 'Salted', 'Brandon Grotesque', sans-serif;
+  --fl-body-font: 'Brandon Grotesque', 'Inter', -apple-system, sans-serif;
+
+  /* Infima overrides */
+  --ifm-color-primary: #0a4a29;
+  --ifm-color-primary-dark: #094225;
+  --ifm-color-primary-darker: #083e23;
+  --ifm-color-primary-darkest: #07331d;
+  --ifm-color-primary-light: #0b522d;
+  --ifm-color-primary-lighter: #0c5630;
+  --ifm-color-primary-lightest: #0e6236;
+  --ifm-font-family-base: var(--fl-body-font);
+  --ifm-heading-font-family: var(--fl-body-font);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #a8c713;
+  --ifm-color-primary-dark: #97b311;
+  --ifm-color-primary-darker: #8fa910;
+  --ifm-color-primary-darkest: #768b0d;
+  --ifm-color-primary-light: #b9db15;
+  --ifm-color-primary-lighter: #c1e516;
+  --ifm-color-primary-lightest: #cbea33;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

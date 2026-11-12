@@ -1,23 +1,396 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* FieldLog landing page */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.landing {
+  font-family: var(--fl-body-font);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── HERO ─────────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding: 6rem 0 7rem;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.55);
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 35, 21, 0.72) 0%,
+    rgba(6, 49, 27, 0.62) 60%,
+    rgba(10, 74, 41, 0.78) 100%
+  );
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.heroTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.heroCopy {
+  flex: 1 1 60%;
+}
+
+.heroHeadline {
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: var(--fl-header-font);
+  text-transform: uppercase;
+}
+
+.headlineLight {
+  color: #fff;
+  font-family: var(--fl-body-font);
+  text-transform: none;
+}
+
+.headlineAccent {
+  color: var(--fl-accent-light);
+  position: relative;
+  display: inline-block;
+}
+
+.headlineAccent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.1em;
+  width: 100%;
+  height: 4px;
+  background: var(--fl-accent-light);
+  border-radius: 2px;
+  transform: rotate(-1deg);
+}
+
+.heroSubheadline {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: normal;
+  color: #fff;
+  margin: 0 0 2.5rem;
+}
+
+.heroMockup {
+  flex: 0 0 38%;
+  display: flex;
+  justify-content: center;
+}
+
+.heroMockupImg {
+  width: 100%;
+  height: auto;
+  margin-bottom: -4rem;
+  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.35));
+}
+
+.heroBody {
+  max-width: 620px;
+  margin: 0 0 2.5rem;
+}
+
+.heroBody p {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 1rem;
+}
+
+.brand {
+  font-family: var(--fl-header-font);
+  text-transform: uppercase;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9375rem;
+  color: var(--fl-text-primary);
+  background: var(--fl-accent-light);
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+  background: #d4dd00;
+  color: var(--fl-text-primary);
+  text-decoration: none;
+}
+
+/* ── HOW IT WORKS ─────────────────────────────────────── */
+
+.howSection {
+  background: linear-gradient(
+    180deg,
+    var(--fl-gradient-end) 0%,
+    var(--fl-gradient-mid) 100%
+  );
+  padding: 5rem 0;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fl-accent-light);
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 3.5rem;
+  text-align: center;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 244px;
+  left: 16.66%;
+  right: 16.66%;
+  height: 2px;
+  background: var(--fl-accent-light);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stepImageWrap {
+  width: 100%;
+  height: 220px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stepImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.stepNode {
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.stepNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--fl-accent);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: 3px solid #f8faf9;
+  box-shadow: 0 2px 10px rgba(27, 67, 50, 0.22);
+}
+
+.stepText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 260px;
+}
+
+.stepTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── FEATURES ─────────────────────────────────────────── */
+
+.featuresSection {
+  background: #fff;
+  padding: 6rem 0 7rem;
+}
+
+.featuresHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--fl-text-primary);
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.featureCard {
+  border: 1px solid #e8e8ec;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(4, 35, 21, 0.08);
+}
+
+.featureImageWrap {
+  width: 100%;
+  height: 110px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  background: #f5fbf7;
+}
+
+.featureImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.featureCard:hover .featureImage {
+  transform: scale(1.03);
+}
+
+.featureTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fl-text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.featureDesc {
+  font-size: 0.875rem;
+  color: var(--fl-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+
+@media (max-width: 996px) {
+  .hero {
+    padding: 4rem 0 5rem;
+  }
+
+  .heroTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroMockup {
+    display: none;
+  }
+
+  .heroBody {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .heroActions {
+    justify-content: center;
+  }
+
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 800px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
+  }
+
+  .steps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
